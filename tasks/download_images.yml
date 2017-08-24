@@ -1,0 +1,36 @@
+---
+- name: download CENTOS 7.3 Server
+  get_url:
+    url: http://ftp.upjs.sk/pub/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1611.iso 
+    dest: /var/lib/libvirt/images/CentOS-7-x86_64-DVD-1611.iso 
+    mode: 0440
+    
+- name: download CENTOS 7 Atomic
+  get_url:
+    url: http://cloud.centos.org/centos/7/atomic/images/CentOS-Atomic-Host-7-Installer.iso
+    dest: /var/lib/libvirt/images/CentOS-Atomic-Host-7-Installer.iso
+    mode: 0440
+
+- name: download FEDORA 26 Server
+  get_url:
+    url: https://download.fedoraproject.org/pub/fedora/linux/releases/26/Server/x86_64/iso/Fedora-Server-dvd-x86_64-26-1.5.iso
+    dest: /var/lib/libvirt/images/Fedora-Server-dvd-x86_64-26-1.5.iso
+    mode: 0440
+
+- name: download FEDORA 26 Atomic
+  get_url:
+    url: https://download.fedoraproject.org/pub/alt/atomic/stable/Fedora-Atomic-26-20170807.0/Atomic/x86_64/iso/Fedora-Atomic-ostree-x86_64-26-20170807.0.iso 
+    dest: /var/lib/libvirt/images/Fedora-Atomic-ostree-x86_64-26-20170807.0.iso 
+    mode: 0440
+
+- name: download UBUNTU 16.04 Server
+  get_url:
+    url: http://releases.ubuntu.com/16.04.3/ubuntu-16.04.3-server-amd64.iso?_ga=2.30780095.1028425295.1503565548-232786357.1502868490
+    dest: /var/lib/libvirt/images/ubuntu-16.04.3-server-amd64.iso
+    mode: 0440
+
+- name: download UBUNTU Snappy
+  get_url:
+    url: http://cdimage.ubuntu.com/ubuntu-core/16/stable/current/ubuntu-core-16-amd64.img.xz
+    dest: /var/lib/libvirt/images/ubuntu-core-16-amd64.img.xz
+    mode: 0440

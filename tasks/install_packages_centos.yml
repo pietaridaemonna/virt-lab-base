@@ -1,0 +1,47 @@
+---
+# THESE ARE FOR HYPERVISOR
+- name: update packages
+  yum:
+    name: '*'
+    state: latest
+
+- name: install the latest packages
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - epel-release
+    - python34
+    - python34-setuptools
+    - virt-install
+    - libvirt-client
+    - qemu
+    - qemu-kvm
+    - qemu-kvm-tools
+    - qemu-img
+    - selinux-policy-mls
+    - setools
+    - cockpit
+    - cockpit-dashboard
+    - rsync
+    - vconfig
+    - vim
+    - git
+
+- name: open firewall
+  command: firewall-cmd --add-port=9090/tcp
+
+- name: setup PIP
+  command: easy_install-2.7 pip
+
+- name: setup PIP3
+  command: easy_install pip
+
+- name: install virtualenv
+  command: pip install virtualenv
+
+- name: install virtualenv3
+  command: pip3 install virtualenv
+
+- name: install virtualenv3
+  command: pip3 install ansible
