@@ -1,0 +1,10 @@
+---
+_vcpus: 2
+_name: f26-atomic
+_memory: 3000
+_disk_hda: /var/lib/libvirt/images/atomic1hda.img
+_disk_hdb: /var/lib/libvirt/images/atomic1hdb.img   
+            
+            #  --location http://example.com/path/to/os
+            #  --initrd-inject /path/to/ks.cfg
+            #  --extra-args="ks=file:/ks.cfg console=tty0 console=ttyS0,115200n8" 

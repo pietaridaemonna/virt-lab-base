@@ -1,0 +1,18 @@
+---
+- name: HYPERVISOR create Fedora 26 Atomic host /dev/hda
+  command: qemu-img create -f raw /var/lib/libvirt/images/atomic1hda.img 10G
+
+- name: HYPERVISOR create Fedora 26 Atomic host /dev/hdb
+  command: qemu-img create -f raw /var/lib/libvirt/images/atomic1hdb.img 20G
+
+- name: HYPERVISOR create Fedora 26 Atomic host
+  command: > 
+             virt-install 
+             --name f26-atomic1
+             --memory 3048
+             --vcpus 2
+             --disk /var/lib/libvirt/images/atomic1hda.img
+             --disk /var/lib/libvirt/images/atomic1hdb.img              
+             --location http://example.com/path/to/os
+             --initrd-inject /path/to/ks.cfg
+             --extra-args="ks=file:/ks.cfg console=tty0 console=ttyS0,115200n8"

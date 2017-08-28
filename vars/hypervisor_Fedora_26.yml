@@ -1,0 +1,24 @@
+---
+__base_packages:
+  - redhat-rpm-config #for ansible
+  - nmcli
+  - atomic
+  - docker
+  - gcc
+  - cmake
+  - python3
+  - python3-setuptools
+  - virt-install
+  - libvirt-client
+  - qemu
+  - qemu-kvm
+  - qemu-kvm-core
+  - qemu-img
+  - selinux-policy-mls
+  - setools
+  - cockpit
+  - cockpit-dashboard
+  - rsync
+  - vconfig
+  - vim
+  - git

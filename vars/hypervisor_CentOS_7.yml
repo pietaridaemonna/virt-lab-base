@@ -1,0 +1,26 @@
+---
+__base_packages:
+  - epel-release
+  - docker 
+  - atomic
+  - gcc
+  - cmake
+  - python34
+  - python34-setuptools
+  - virt-install
+  - libvirt-client
+  - qemu
+  - qemu-kvm
+  - qemu-kvm-tools
+  - qemu-img
+  - selinux-policy-mls
+  - setools
+  - cockpit
+  - cockpit-dashboard
+  - rsync
+  - vconfig
+  - vim
+  - git
+  - nmcli
+
+  

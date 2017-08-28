@@ -1,0 +1,15 @@
+---
+- name: HYPERVISOR update packages
+  package:
+    name: '*'
+    state: latest
+
+- name: HYPERVISOR install requirements
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    {{__base_packages}}
+
+
+

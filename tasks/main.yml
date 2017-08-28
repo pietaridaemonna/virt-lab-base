@@ -1,1 +1,5 @@
 ---
+tasks:
+  - include: download_images.yml
+  - include: install_packages.yml
+  - include: kvm_install_vms.yml
